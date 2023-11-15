@@ -32,22 +32,22 @@ export const NavItem = ({ isExpanded, isActive, organization, onExpand }: NavIte
         {
             label: "Boards",
             icon: <Layout className="h-4 w-4 mr-2" />,
-            href: `/organizations/${organization.id}`
+            href: `/organization/${organization.id}`
         },
         {
             label: "Activity",
             icon: <Activity className="h-4 w-4 mr-2" />,
-            href: `/organizations/${organization.id}/activity`
+            href: `/organization/${organization.id}/activity`
         },
         {
             label: "Settings",
             icon: <Settings className="h-4 w-4 mr-2" />,
-            href: `/organizations/${organization.id}/settings`
+            href: `/organization/${organization.id}/settings`
         },
         {
             label: "Billing",
             icon: <CreditCard className="h-4 w-4 mr-2" />,
-            href: `/organizations/${organization.id}/billing`
+            href: `/organization/${organization.id}/billing`
         },
     ]
 

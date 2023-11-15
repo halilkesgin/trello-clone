@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import { siteConfig } from "@/config/site"
 
 import "./globals.css"
+import { ThemeProvider } from "@/components/providers/theme-prodiver"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -29,7 +30,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     )
